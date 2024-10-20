@@ -1,15 +1,25 @@
 {
-  "name": "@equantin/typera-express-zod",
+  "name": "@equantin/typera-zod-koa",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "license": "MIT",
-  "author": "Cyril CHAPON (https://github.com/cyrilchapon)",
+  "sideEffects": false,
+  "description": "Support of zod on typera - koa",
+  "main": "commonjs/index.js",
+  "module": "es/index.js",
+  "typings": "commonjs/index.d.ts",
+  "files": [
+    "commonjs",
+    "es"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyrilchapon/typera-common-zod.git",
-    "directory": "packages/typera-express-zod"
+    "url": "git+https://github.com/equantin/typera-zod.git"
   },
+  "keywords": [
+    "typescript",
+    "typera",
+    "zod",
+    "koa"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.build.json --noEmit",
@@ -22,14 +32,23 @@
     "prepublishOnly": "yarn integrity",
     "prepack": "yarn build"
   },
+  "author": "Etienne Quantin",
+  "bugs": {
+    "url": "https://github.com/equantin/typera-zod"
+  },
+  "homepage": "https://github.com/equantin/typera-zod#readme",
   "dependencies": {
     "@equantin/typera-common-zod": "^1.0.0",
     "typera-common": "^2.4.3",
-    "typera-express": "^2.4.4"
+    "typera-koa": "^2.4.4"
   },
+
   "devDependencies": {
+    "@types/koa-bodyparser": "4.3.2",
+    "@types/koa-cookie": "1.0.0",
+    "koa-bodyparser": "4.3.0",
+    "koa-cookie": "1.0.0",
     "@types/chai": "^4.3.4",
-    "@types/express": "^4.17.17",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.15.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
@@ -45,6 +64,6 @@
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "express": "^4.18.2"
+    "koa": "^2.15.3"
   }
 }

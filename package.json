@@ -1,6 +1,6 @@
 {
-  "name": "@chimanos/typera-zod",
-  "version": "0.0.1",
+  "name": "@equantin/typera-zod",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "workspaces": {
@@ -9,7 +9,8 @@
     ]
   },
   "scripts": {
-    "common": "yarn workspace @chimanos/typera-common-zod",
-    "express": "yarn workspace @chimanos/typera-express-zod"
+    "common": "yarn workspace @equantin/typera-common-zod",
+    "express": "yarn workspace @equantin/typera-express-zod",
+    "koa": "yarn workspace @equantin/typera-koa-zod"
   }
 }
